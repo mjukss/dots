@@ -9,3 +9,5 @@ vim.keymap.set("n", "<leader>fo", function()
 end)
 
 vim.keymap.set("n", "<C-p>", vim.lsp.buf.signature_help)
+
+vim.keymap.set('n', '<Space>', ',', {noremap = true})

@@ -11,16 +11,15 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 metals_config.capabilities = capabilities
 
 metals_config.on_attach = function(client, bufnr)
+  -- vim.keymap.set("n", "<leader>tt", require("metals.tvp").toggle_tree_view)
 
-  vim.keymap.set("n", "<leader>tt", require("metals.tvp").toggle_tree_view)
+  -- vim.keymap.set("n", "<leader>tr", require("metals.tvp").reveal_in_tree)
 
-  vim.keymap.set("n", "<leader>tr", require("metals.tvp").reveal_in_tree)
+  -- vim.keymap.set("n", "<leader>mc", require("telescope").extensions.metals.commands)
 
-  vim.keymap.set("n", "<leader>mc", require("telescope").extensions.metals.commands)
-
-  vim.keymap.set("n", "<leader>mts", function()
-    require("metals").toggle_setting("showImplicitArguments")
-  end)
+  -- vim.keymap.set("n", "<leader>mts", function()
+    -- require("metals").toggle_setting("showImplicitArguments")
+  -- end)
 
 
   vim.keymap.set('n', '<leader>pj', function()
