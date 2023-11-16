@@ -15,4 +15,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 
 
-vim.cmd("colorscheme kanagawa")
+-- vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme rose-pine")
+vim.cmd("highlight Normal guibg=#121212 ctermbg=235")
+-- vim.cmd("highlight Normal guibg=NONE ctermbg=235")
+vim.cmd("highlight SignColumn guibg=NONE ctermbg=235")

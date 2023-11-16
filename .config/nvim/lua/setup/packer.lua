@@ -5,15 +5,15 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   use({ "rebelot/kanagawa.nvim" })
 
-  use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim" } })
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-  use("petertriho/nvim-scrollbar")
+  use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim" } })
 
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -31,7 +31,7 @@ return require('packer').startup(function(use)
     requires = {
       -- LSP Support
       { 'neovim/nvim-lspconfig' }, -- Required
-      { -- Optional
+      {                            -- Optional
         'williamboman/mason.nvim',
         run = function()
           pcall(vim.cmd, 'MasonUpdate')
@@ -40,9 +40,13 @@ return require('packer').startup(function(use)
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' }, -- Required
+      { 'hrsh7th/nvim-cmp' },     -- Required
       { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-      { 'L3MON4D3/LuaSnip' }, -- Required
+      { 'L3MON4D3/LuaSnip' },     -- Required
     }
   }
+
+  use("tpope/vim-fugitive")
+  use("theprimeagen/harpoon")
+  use "sindrets/diffview.nvim"
 end)
