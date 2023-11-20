@@ -31,6 +31,7 @@ vim.api.nvim_exec([[
   augroup conditional_folding
     autocmd!
     autocmd BufReadPost * if getline(1) =~# '^tree' | setlocal foldmethod=syntax | endif
+    autocmd BufReadPost * if getline(1) =~# '^commit' | setlocal foldmethod=syntax | endif
   augroup END
 ]], false)
 

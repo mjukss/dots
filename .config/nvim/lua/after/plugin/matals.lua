@@ -19,7 +19,9 @@ metals_config.on_attach = function(client, bufnr)
   -- vim.keymap.set("n", "<leader>mts", function()
   -- require("metals").toggle_setting("showImplicitArguments")
   -- end)
+  --
 
+  vim.keymap.set("n", "<leader>oo", ':MetalsOrganizeImports<CR>', { noremap = true })
 
   vim.keymap.set('n', '<leader>pj', function()
     require("telescope.builtin").live_grep({ cwd = '.metals/readonly/dependencies' })
@@ -27,7 +29,6 @@ metals_config.on_attach = function(client, bufnr)
 
   vim.o.shortmess = string.gsub(vim.o.shortmess, "F", "") .. "c"
 end
-
 
 -- metals_config.init_options.statusBarProvider = "on"
 
