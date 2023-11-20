@@ -46,6 +46,8 @@ return require('packer').startup(function(use)
     }
   }
 
+  use 'nvim-treesitter/playground'
+
   use("tpope/vim-fugitive")
   use("theprimeagen/harpoon")
   use "sindrets/diffview.nvim"

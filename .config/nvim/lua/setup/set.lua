@@ -16,7 +16,7 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
@@ -24,4 +24,13 @@ vim.opt.scrolloff = 8
 vim.opt.ignorecase = true
 
 vim.opt.cursorline = true
+
+vim.g.fugitive_summary_format = "%cs | %<(20,trunc)%an | %s"
+
+vim.api.nvim_exec([[
+  augroup conditional_folding
+    autocmd!
+    autocmd BufReadPost * if getline(1) =~# '^tree' | setlocal foldmethod=syntax | endif
+  augroup END
+]], false)
 
