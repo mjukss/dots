@@ -14,7 +14,7 @@ vim.keymap.set('n', '<esc>', ':noh<return><esc>', { noremap = true, silent = tru
 
 vim.keymap.set("n", "<leader>gl", ':Gclog<CR>', { noremap = true })
 
-vim.keymap.set("n", "<leader>gb", function() vim.cmd(':G show ' .. vim.fn.expand('<cword>')) end)
+vim.keymap.set("n", "<leader>gS", function() vim.cmd(':G show ' .. vim.fn.expand('<cword>')) end)
 
 vim.keymap.set("n", "<leader>gs", ':G<CR>', { noremap = true })
 
