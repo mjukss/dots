@@ -1,5 +1,4 @@
 
-vim.g.netrw_liststyle = 3
 
 vim.opt.clipboard = "unnamedplus"
 vim.opt.nu = true

@@ -1,33 +1,26 @@
-vim.cmd "packadd packer.nvim"
+return require("lazy").setup({
+  "lewis6991/gitsigns.nvim",
+  "nvim-treesitter/playground",
+  {"tpope/vim-fugitive", lazy = false},
+  {"theprimeagen/harpoon", branch = "harpoon2"},
 
-return require("packer").startup(function(use)
-  use { "wbthomason/packer.nvim" }
+  { "rose-pine/neovim",                version = "rose-pine" },
+  { "nvim-telescope/telescope.nvim",   tag = "0.1.4",                             dependencies = { "nvim-lua/plenary.nvim" } },
+  { "scalameta/nvim-metals",           dependencies = { "nvim-lua/plenary.nvim" } },
 
-  use { "rose-pine/neovim", as = "rose-pine" }
-  use { "lewis6991/gitsigns.nvim" }
-  use { "nvim-treesitter/playground" }
-  use { "tpope/vim-fugitive" }
-  use { "theprimeagen/harpoon" }
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
-  use { "nvim-telescope/telescope.nvim", tag = "0.1.4", requires = { "nvim-lua/plenary.nvim" } }
-  use { "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim" } }
-
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = require("nvim-treesitter.install").update({ with_sync = true })
-  }
-
-  use {
+  {
     "VonHeikemen/lsp-zero.nvim",
-    branch = "v2.x",
-    requires = {
-      { 'neovim/nvim-lspconfig' },                                                                -- Required
-      { 'williamboman/mason.nvim',          run = function() pcall(vim.cmd, 'MasonUpdate') end }, -- Optional
-      { 'williamboman/mason-lspconfig.nvim' },                                                    -- Optional
-      { "neovim/nvim-lspconfig" },                                                                -- Required
-      { "hrsh7th/nvim-cmp" },                                                                     -- Required
-      { "hrsh7th/cmp-nvim-lsp" },                                                                 -- Required
-      { "L3MON4D3/LuaSnip" }                                                                      -- Required
+    branch = "v3.x",
+    dependencies = {
+      { 'neovim/nvim-lspconfig' },             -- Required
+      { 'williamboman/mason.nvim' },           -- Optional
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+      { "neovim/nvim-lspconfig" },             -- Required
+      { "hrsh7th/nvim-cmp" },                  -- Required
+      { "hrsh7th/cmp-nvim-lsp" },              -- Required
+      { "L3MON4D3/LuaSnip" }                   -- Required
     }
   }
-end)
+})

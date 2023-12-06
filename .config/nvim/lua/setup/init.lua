@@ -11,4 +11,6 @@ require("after.plugin.harpoon")
 require("after.plugin.gitsigns")
 require("after.plugin.lsp")
 require("after.plugin.fugitive")
+require("after.plugin.mason")
+require("after.plugin.netrw")
 

@@ -9,7 +9,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>fo", function() vim.lsp.buf.format({ async = true }) end)
 end)
 
-lsp.setup_servers({ 'tsserver', 'eslint' })
+lsp.setup_servers({ 'tsserver', 'eslint', 'html' })
 
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
