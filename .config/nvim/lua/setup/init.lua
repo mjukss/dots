@@ -1,5 +1,5 @@
 require("setup.remap")
-require("setup.packer")
+require("setup.lazy")
 require("setup.set")
 require("after.plugin.mason")
 require("after.plugin.theme")
@@ -12,5 +12,5 @@ require("after.plugin.harpoon")
 require("after.plugin.gitsigns")
 require("after.plugin.lsp")
 require("after.plugin.fugitive")
-require("after.plugin.netrw")
+require("after.plugin.oil")
 

@@ -1,4 +1,5 @@
 return require("lazy").setup({
+  "stevearc/oil.nvim",
   "lewis6991/gitsigns.nvim",
   "nvim-treesitter/playground",
   { "tpope/vim-fugitive",              lazy = false },
