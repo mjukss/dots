@@ -1,4 +1,5 @@
-vim.opt.clipboard = "unnamedplus"
+-- let's try to separate vim clipboard from system
+-- vim.opt.clipboard = "unnamedplus"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 

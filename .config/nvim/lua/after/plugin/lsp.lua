@@ -1,4 +1,4 @@
-local lsp = require('lsp-zero').preset({})
+local lsp = require("lsp-zero").preset({})
 
 
 lsp.on_attach(function(client, bufnr)
@@ -9,9 +9,9 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>fo", function() vim.lsp.buf.format({ async = true }) end)
 end)
 
-lsp.setup_servers({ 'tsserver', 'eslint', 'html' })
+lsp.setup_servers({ "tsserver", "eslint", "html" })
 
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
