@@ -1,5 +1,6 @@
 return require("lazy").setup({
-  "stevearc/oil.nvim",
+  -- "stevearc/oil.nvim",
+  { "mjukss/oil.nvim",                 branch = "keep-alive-preview-on-cd" },
   "lewis6991/gitsigns.nvim",
   "nvim-treesitter/playground",
 
