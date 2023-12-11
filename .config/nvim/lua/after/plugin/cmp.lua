@@ -1,11 +1,13 @@
 local cmp = require('cmp')
 
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
 cmp.setup({
   mapping = {
-    -- `Enter` key to confirm completion
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-    -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
   }
 })
