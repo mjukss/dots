@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 
-
 vim.keymap.set('n', '<esc>', ':noh<return><esc>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<leader>tc', ':tabc<CR>', { noremap = true })
@@ -21,3 +20,6 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>y", "\"+Y")
 
 vim.keymap.set("n", "q:", "<nop>")
+
+vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
